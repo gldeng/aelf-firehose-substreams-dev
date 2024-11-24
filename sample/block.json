@@ -1,0 +1,160 @@
+{
+    "block": {
+        "block_hash": "3520c415b839a6f5f84578dd83504e84db9ded4e03a2153ea140feae38d7b344",
+        "header": {
+            "bloom": "00000000000000000000000000000000004000000000020000000000000000008000000000000000000000000000000000000000000000000020000000000000000000000000080000000000000000000000400210000000000000000000000000000000000020000000000100008000000000000001000000000000000000200200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000010000000000000000000000000000000000080000001000000000080000000000000000000000000000000000000000000000000000000000000000000000400000000000000000",
+            "chain_id": 9992731,
+            "extra_data": {
+                "Consensus": "0a41044f355bdcb7cc0af728ef3cceb9615d90684bb5b2ca5f859ab0f0b704075871aa385b6b1b8ead809ca67454d9683fcf2ba03456d6fe2c4abe2b07f0fbdbb2f1c112f003084012e5030a82013034346633353562646362376363306166373238656633636365623936313564393036383462623562326361356638353961623066306237303430373538373161613338356236623162386561643830396361363734353464393638336663663262613033343536643666653263346162653262303766306662646262326631633112dd0238f8074a8201303434663335356264636237636330616637323865663363636562393631356439303638346262356232636135663835396162306630623730343037353837316161333835623662316238656164383039636136373435346439363833666366326261303334353664366665326334616265326230376630666264626232663163316a0608f8be8aba066a0b08f8be8aba0610d8d5e4296a0b08f8be8aba0610a88cca4f6a0b08f8be8aba0610ccd5886f6a0c08f8be8aba0610b89de78c016a0c08f8be8aba0610e8a3baac016a0c08f8be8aba061080f3a7ca016a0c08f8be8aba0610f8ac91eb016a0608fcbe8aba066a0b08fcbe8aba0610e0c1902d6a0b08fcbe8aba0610b0f89a4f6a0b08fcbe8aba0610c08dce6e6a0c08fcbe8aba0610b4bc848d016a0c08fcbe8aba0610989f98ab016a0c08fcbe8aba0610f0b8fcca016a0c08fcbe8aba0610a4a2c5e9018001108801f20750fcbe8aba061804",
+                "SystemTransactionCount": "0802",
+                "CrossChain": ""
+            },
+            "height": 1017,
+            "merkle_tree_root_of_transaction_status": "55331d77f485d8813e004af742dd48d2c0963b70d4109557514fd9c313a0349e",
+            "merkle_tree_root_of_transactions": "9a19217db3f82ad1fe4b391f0fa7b1767ee379bdd87afca5b6ff5e9750fcfd05",
+            "merkle_tree_root_of_world_state": "6a78bb056d1820b1c3e8d9e44d27ab1313ecb2e39a7bdcf15b7ec31206d7d4c8",
+            "previous_block_hash": "ba3637f208a3edaed6aa013713ac5b122276cfd88cb782c46c3737e2d347333a",
+            "signature": "0d3a7bc8ae68617139ef9404eaf31211d017e53224a30c866863fe2af3a0ac5f21d84983bafef1e04a805018ddfc3ddb5dc2fc2ab9b3ef3985c8640d758c096500",
+            "signer_pubkey": "044f355bdcb7cc0af728ef3cceb9615d90684bb5b2ca5f859ab0f0b704075871aa385b6b1b8ead809ca67454d9683fcf2ba03456d6fe2c4abe2b07f0fbdbb2f1c1",
+            "time": {
+                "nanos": 489771300,
+                "seconds": 1732419452
+            }
+        },
+        "height": 1017,
+        "transaction_traces": [
+            {
+                "calls": [
+                    {
+                        "call_path": ":0:pre:0",
+                        "execution_status": 1,
+                        "from": "W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1",
+                        "method_name": "ChargeTransactionFees",
+                        "params": "0a1a55706461746554696e79426c6f636b496e666f726d6174696f6e12220a206b542bfc2751db6d0cc1aef4b8b071b13480c947dc9b263b8191fb810450643d1880cf8611",
+                        "ref_block_number": 1016,
+                        "return_value": "0801",
+                        "state_set": {
+                            "reads": {
+                                "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE/TransactionFeeFreeAllowancesSymbolList": true,
+                                "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE/ChainPrimaryTokenSymbol": true
+                            }
+                        },
+                        "to": "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE",
+                        "transaction_id": "2feeca1d16259be86477d11e4f31563c6b3bff3ac91ccc1530b6de4a642f1fe1"
+                    },
+                    {
+                        "call_path": ":0",
+                        "execution_status": 1,
+                        "from": "W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1",
+                        "logs": [
+                            {
+                                "address": "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ",
+                                "indexed": [
+                                    "0a820130343466333535626463623763633061663732386566336363656239363135643930363834626235623263613566383539616230663062373034303735383731616133383562366231623865616438303963613637343534643936383366636632626130333435366436666532633461626532623037663066626462623266316331",
+                                    "120c08fcbe8aba0610a4a2c5e901",
+                                    "1a1a55706461746554696e79426c6f636b496e666f726d6174696f6e",
+                                    "20f907",
+                                    "2a220a20ba3637f208a3edaed6aa013713ac5b122276cfd88cb782c46c3737e2d347333a"
+                                ],
+                                "name": "MiningInformationUpdated"
+                            }
+                        ],
+                        "method_name": "UpdateTinyBlockInformation",
+                        "params": "08fcbe8aba06120c08fcbe8aba0610a4a2c5e90118f807225102eaf686346b9a811b214242d6932c10d67a9f4855e6e3046602fd10ef221b3facf53d51349c69f7ece3c7c6012478b3b4cd7a76200615463bbbd2a05d588362b77e6a7a20291a83ad6c2c3fd20fef56c3",
+                        "ref_block_number": 1016,
+                        "ref_block_prefix": "ba3637f2",
+                        "state_set": {
+                            "reads": {
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/RandomHashes/1017": true,
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/IsMainChain": true,
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/LatestExecutedHeight": true,
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/RoundBeforeLatestExecution": true,
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/LatestPubkeyToTinyBlocksCount": true,
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/CurrentRoundNumber": true,
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/Rounds/63": true,
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/RandomHashes/1016": true,
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/IsPreviousBlockInSevereStatus": true,
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/Rounds/64": true
+                            },
+                            "writes": {
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/RoundBeforeLatestExecution": "084012e1040a82013034346633353562646362376363306166373238656633636365623936313564393036383462623562326361356638353961623066306237303430373538373161613338356236623162386561643830396361363734353464393638336663663262613033343536643666653263346162653262303766306662646262326631633112d9030801100122220a201f8025b4697ff1d892a197400506bd4d55ff3ca8a72a3dde40d91a9c4fa3a7032a220a20979c06d0f478eaf7e7adb109434eff12f935cd8713ccf5667eeea4070829513a320608fcbe8aba0638f8074a82013034346633353562646362376363306166373238656633636365623936313564393036383462623562326361356638353961623066306237303430373538373161613338356236623162386561643830396361363734353464393638336663663262613033343536643666653263346162653262303766306662646262326631633152220a201bac8f3d754bdcbe90dbefbc230b4d853d0de4b2dd989b6adf7cd16c84237c84580160016a0608f8be8aba066a0b08f8be8aba0610d8d5e4296a0b08f8be8aba0610a88cca4f6a0b08f8be8aba0610ccd5886f6a0c08f8be8aba0610b89de78c016a0c08f8be8aba0610e8a3baac016a0c08f8be8aba061080f3a7ca016a0c08f8be8aba0610f8ac91eb016a0608fcbe8aba066a0b08fcbe8aba0610e0c1902d6a0b08fcbe8aba0610b0f89a4f6a0b08fcbe8aba0610c08dce6e6a0c08fcbe8aba0610b4bc848d016a0c08fcbe8aba0610989f98ab016a0c08fcbe8aba0610f0b8fcca016a0c08fcbe8aba0610a4a2c5e9018001108801f207208c042a820130343466333535626463623763633061663732386566336363656239363135643930363834626235623263613566383539616230663062373034303735383731616133383562366231623865616438303963613637343534643936383366636632626130333435366436666532633461626532623037663066626462623266316331300138e207403f",
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/RandomHashes/1017": "0a207ce051d956c34a5ed441a2f1ff04030b02f4f8eec44711ed906b08ddbe5e6ca4",
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/LatestExecutedHeight": "f20f",
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/Rounds/64": "084012e1040a82013034346633353562646362376363306166373238656633636365623936313564393036383462623562326361356638353961623066306237303430373538373161613338356236623162386561643830396361363734353464393638336663663262613033343536643666653263346162653262303766306662646262326631633112d9030801100122220a201f8025b4697ff1d892a197400506bd4d55ff3ca8a72a3dde40d91a9c4fa3a7032a220a20979c06d0f478eaf7e7adb109434eff12f935cd8713ccf5667eeea4070829513a320608fcbe8aba0638f8074a82013034346633353562646362376363306166373238656633636365623936313564393036383462623562326361356638353961623066306237303430373538373161613338356236623162386561643830396361363734353464393638336663663262613033343536643666653263346162653262303766306662646262326631633152220a201bac8f3d754bdcbe90dbefbc230b4d853d0de4b2dd989b6adf7cd16c84237c84580160016a0608f8be8aba066a0b08f8be8aba0610d8d5e4296a0b08f8be8aba0610a88cca4f6a0b08f8be8aba0610ccd5886f6a0c08f8be8aba0610b89de78c016a0c08f8be8aba0610e8a3baac016a0c08f8be8aba061080f3a7ca016a0c08f8be8aba0610f8ac91eb016a0608fcbe8aba066a0b08fcbe8aba0610e0c1902d6a0b08fcbe8aba0610b0f89a4f6a0b08fcbe8aba0610c08dce6e6a0c08fcbe8aba0610b4bc848d016a0c08fcbe8aba0610989f98ab016a0c08fcbe8aba0610f0b8fcca016a0c08fcbe8aba0610a4a2c5e9018001108801f207208c042a820130343466333535626463623763633061663732386566336363656239363135643930363834626235623263613566383539616230663062373034303735383731616133383562366231623865616438303963613637343534643936383366636632626130333435366436666532633461626532623037663066626462623266316331300138e207403f",
+                                "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ/LatestPubkeyToTinyBlocksCount": "0a8201303434663335356264636237636330616637323865663363636562393631356439303638346262356232636135663835396162306630623730343037353837316161333835623662316238656164383039636136373435346439363833666366326261303334353664366665326334616265326230376630666264626232663163311090f8ffffffffffffff01"
+                            }
+                        },
+                        "to": "pGa4e5hNGsgkfjEGm72TEvbF7aRDqKBd4LuXtab4ucMbXLcgJ",
+                        "transaction_id": "2feeca1d16259be86477d11e4f31563c6b3bff3ac91ccc1530b6de4a642f1fe1"
+                    }
+                ],
+                "main_call_index": 1,
+                "raw_transaction": "0a220a2041e15ffe12b67395223a6f1aeb5f0cad071a22f6e87a6f01a1e9c9caf6898d3b12220a206b542bfc2751db6d0cc1aef4b8b071b13480c947dc9b263b8191fb810450643d18f8072204ba3637f22a1a55706461746554696e79426c6f636b496e666f726d6174696f6e326a08fcbe8aba06120c08fcbe8aba0610a4a2c5e90118f807225102eaf686346b9a811b214242d6932c10d67a9f4855e6e3046602fd10ef221b3facf53d51349c69f7ece3c7c6012478b3b4cd7a76200615463bbbd2a05d588362b77e6a7a20291a83ad6c2c3fd20fef56c382f10441de67c07153de390be7a334e207e333427313923d08706f9d36fd216f9a692cef602a342c4a2fc0efaf0bc0b5119f7898b7d0705be8b090c3a37cee6ff963ecc201",
+                "signature": "de67c07153de390be7a334e207e333427313923d08706f9d36fd216f9a692cef602a342c4a2fc0efaf0bc0b5119f7898b7d0705be8b090c3a37cee6ff963ecc201",
+                "transaction_id": "2feeca1d16259be86477d11e4f31563c6b3bff3ac91ccc1530b6de4a642f1fe1"
+            },
+            {
+                "calls": [
+                    {
+                        "call_path": ":0:pre:0",
+                        "execution_status": 1,
+                        "from": "W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1",
+                        "method_name": "ChargeTransactionFees",
+                        "params": "0a13446f6e6174655265736f75726365546f6b656e12220a202791e992a57f28e75a11f13af2c0aec8b0eb35d2f048d42eba8901c92e0378dc18b085d20c",
+                        "ref_block_number": 1016,
+                        "return_value": "0801",
+                        "state_set": {
+                            "reads": {
+                                "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE/ChainPrimaryTokenSymbol": true,
+                                "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE/TransactionFeeFreeAllowancesSymbolList": true
+                            }
+                        },
+                        "to": "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE",
+                        "transaction_id": "52fa24863a5e0664f3f3198e4f7052aa6e1c960956c9154de630d83fc94e2ef1"
+                    },
+                    {
+                        "call_path": ":0",
+                        "execution_status": 1,
+                        "from": "W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1",
+                        "method_name": "DonateResourceToken",
+                        "params": "12220a20ba3637f208a3edaed6aa013713ac5b122276cfd88cb782c46c3737e2d347333a18f807",
+                        "ref_block_number": 1016,
+                        "ref_block_prefix": "ba3637f2",
+                        "state_set": {
+                            "reads": {
+                                "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE/LatestTotalResourceTokensMapsHash": true,
+                                "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE/DonateResourceTokenExecuteHeight": true,
+                                "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE/ConsensusContract": true,
+                                "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE/DividendPoolContract": true
+                            },
+                            "writes": {
+                                "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE/DonateResourceTokenExecuteHeight": "f40f",
+                                "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE/LatestTotalResourceTokensMapsHash": "0a2030dea2d5270f3af4a1f187b74fd717411eba0c0e1909ea1566e14da751bdbaff"
+                            }
+                        },
+                        "to": "JRmBduh4nXWi1aXgdUsj5gJrzeZb2LxmrAbf7W99faZSvoAaE",
+                        "transaction_id": "52fa24863a5e0664f3f3198e4f7052aa6e1c960956c9154de630d83fc94e2ef1"
+                    }
+                ],
+                "main_call_index": 1,
+                "raw_transaction": "0a220a2041e15ffe12b67395223a6f1aeb5f0cad071a22f6e87a6f01a1e9c9caf6898d3b12220a202791e992a57f28e75a11f13af2c0aec8b0eb35d2f048d42eba8901c92e0378dc18f8072204ba3637f22a13446f6e6174655265736f75726365546f6b656e322712220a20ba3637f208a3edaed6aa013713ac5b122276cfd88cb782c46c3737e2d347333a18f80782f10441bcc29659bc1a7c591308208c5e94cdb28d6256cf5721a8788895bc77d7eba5185d829de95b09e08128854d787c00a470a0126ba8596f0c84c3a0083f2376c75b01",
+                "signature": "bcc29659bc1a7c591308208c5e94cdb28d6256cf5721a8788895bc77d7eba5185d829de95b09e08128854d787c00a470a0126ba8596f0c84c3a0083f2376c75b01",
+                "transaction_id": "52fa24863a5e0664f3f3198e4f7052aa6e1c960956c9154de630d83fc94e2ef1"
+            }
+        ],
+        "version": 1
+    },
+    "step": 1,
+    "cursor": "GDld4AsjP7dyg-xN51_43KWwLpcyB1puUgHmLxNB1o_39SDN3pT3BjdwPhXUla74iUHjSF-s2orFECop-5QF6NW_w7s17yA9RS59ko3ureG-LfD6bQ1Jcr9mVeOHZtLcW2jVZlj9KLkFsYbkOKDdNEtkZsEmK26zhzcBptFSJaYZvCJgw2qsIsyBhviQ84cQqud2R-OllSuqDmcvfhxT",
+    "metadata": {
+        "num": 1017,
+        "id": "3520c415b839a6f5f84578dd83504e84db9ded4e03a2153ea140feae38d7b344",
+        "parent_num": 1016,
+        "parent_id": "ba3637f208a3edaed6aa013713ac5b122276cfd88cb782c46c3737e2d347333a",
+        "lib_num": 994,
+        "time": {
+            "seconds": 1732419452,
+            "nanos": 489771264
+        }
+    }
+}

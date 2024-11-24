@@ -1,0 +1,17 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  up:
+    cmds:
+      - rm -rf fireaelf-data Logs
+      - docker-compose up -d
+
+  down:
+    cmds:
+      - docker-compose down -v
+
+  test:
+    cmds:
+      - docker run -it fireaelf tools firehose-client  -p host.docker.internal:10015 2
