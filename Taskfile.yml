@@ -14,4 +14,4 @@ tasks:
 
   test:
     cmds:
-      - docker run -it fireaelf tools firehose-client  -p host.docker.internal:10015 2
+      - docker run -it fireaelf tools firehose-client  -p host.docker.internal:10015 115

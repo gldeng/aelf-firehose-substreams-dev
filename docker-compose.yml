@@ -13,10 +13,8 @@ services:
       - "AElf.Launcher"
       - "--reader-node-arguments"
       - "--data-directory /data/node"
-      - "--advertise-chain-name"
-      - "aelf"
-      - "--advertise-block-id-encoding"
-      - "hex"
+    ports:
+      - "8000:8000"
     volumes:
       - "./fireaelf-data:/data"
       - "./Logs:/app/Logs"
