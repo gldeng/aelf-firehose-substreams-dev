@@ -58,7 +58,10 @@ services:
       - "--config-file"
       - ""
       - "start"
-      - "firehose"
+      - "firehose,substreams-tier1,substreams-tier2"
+      - "--common-live-blocks-addr"
+      - "--common-first-streamable-block=1"
+      - "--substreams-state-bundle-size=10"
       - "--common-one-block-store-url"
       - "file:///data/one-blocks"
       - "--common-merged-blocks-store-url"
@@ -73,5 +76,6 @@ services:
       - "hex"
     ports:
       - "10015:10015"
+      - "10016:10016"
     volumes:
       - "./fireaelf-data:/data"
