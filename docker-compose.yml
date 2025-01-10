@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   reader:
-    image: "fireaelf"
+    image: "ghcr.io/gldeng/fireaelf-docker-build:9dd263a"
     command:
       - "--config-file"
       - ""
@@ -15,12 +15,17 @@ services:
       - "--data-directory /data/node"
     ports:
       - "8000:8000"
+    environment:
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app
+      - ASPNETCORE_ENVIRONMENT=LocalTestNode
     volumes:
       - "./fireaelf-data:/data"
       - "./Logs:/app/Logs"
       - "./start-aelf-node:/app/AElf.Launcher"
       - "./appsettings.json:/app/appsettings.json"
+      - "./appsettings.LocalTestNode.json:/app/appsettings.LocalTestNode.json"
       - "./appsettings.MainChain.MainNet.json:/app/appsettings.MainChain.MainNet.json"
+      - "./W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json:/root/.local/share/aelf/keys/W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json"
 
   merger:
     image: "fireaelf"
