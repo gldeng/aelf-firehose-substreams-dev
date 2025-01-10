@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   reader:
-    image: "ghcr.io/gldeng/fireaelf-docker-build:9dd263a"
+    image: "ghcr.io/gldeng/fireaelf-docker-build:65f03a1"
     command:
       - "--config-file"
       - ""
