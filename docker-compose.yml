@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   reader:
-    image: "ghcr.io/gldeng/fireaelf-docker-build:65f03a1"
+    image: "ghcr.io/gldeng/fireaelf-docker-build:4bb3eab"
     command:
       - "--config-file"
       - ""
@@ -28,7 +28,7 @@ services:
       - "./W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json:/root/.local/share/aelf/keys/W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json"
 
   merger:
-    image: "ghcr.io/gldeng/fireaelf-docker-build:65f03a1"
+    image: "ghcr.io/gldeng/fireaelf-docker-build:4bb3eab"
     command:
       - "--config-file"
       - ""
@@ -44,7 +44,7 @@ services:
       - "./fireaelf-data:/data"
 
   relayer:
-    image: "ghcr.io/gldeng/fireaelf-docker-build:65f03a1"
+    image: "ghcr.io/gldeng/fireaelf-docker-build:4bb3eab"
     command:
       - "--config-file"
       - ""
@@ -58,7 +58,7 @@ services:
       - "./fireaelf-data:/data"
 
   firehose:
-    image: "ghcr.io/gldeng/fireaelf-docker-build:65f03a1"
+    image: "ghcr.io/gldeng/fireaelf-docker-build:4bb3eab"
     command:
       - "--config-file"
       - ""
