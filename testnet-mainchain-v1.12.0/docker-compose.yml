@@ -8,7 +8,7 @@ services:
       - "./data/chaindb/var:/opt/var"
       - "./data/chaindb/log.txt:/opt/log.txt"
     healthcheck:
-      test: ["CMD", "bash", "-c", "echo 'ping' | nc 127.0.0.1 8888 | grep ok"]
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/8888"]
       interval: 5s
       timeout: 3s
       retries: 5
@@ -23,7 +23,7 @@ services:
       - "./data/statedb/var:/opt/var"
       - "./data/statedb/log.txt:/opt/log.txt"
     healthcheck:
-      test: ["CMD", "bash", "-c", "echo 'ping' | nc 127.0.0.1 8888 | grep ok"]
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/8888"]
       interval: 5s
       timeout: 3s
       retries: 5
