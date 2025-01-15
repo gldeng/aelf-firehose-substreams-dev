@@ -1,0 +1,70 @@
+version: "3.8"
+services:
+  chaindb:
+    image: "aelf/aelf-ssdb:latest"
+    ports:
+      - "8881:8888"
+    volumes:
+      - "./data/chaindb/var:/opt/var"
+      - "./data/chaindb/log.txt:/opt/log.txt"
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo 'ping' | nc 127.0.0.1 8888 | grep ok"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    restart: always
+
+  statedb:
+    image: "aelf/aelf-ssdb:latest"
+    ports:
+      - "8882:8888"
+    volumes:
+      - "./data/statedb/var:/opt/var"
+      - "./data/statedb/log.txt:/opt/log.txt"
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo 'ping' | nc 127.0.0.1 8888 | grep ok"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    restart: always
+
+  fireaelf:
+    image: "ghcr.io/gldeng/fireaelf-docker-build-testnet:c33bf6b"
+    command:
+      - "--config-file"
+      - ""
+      - "start"
+      - "reader-node"
+      - "--common-one-block-store-url"
+      - "${DATA_PATH:-file:///data}/one-blocks"
+      - "--reader-node-path"
+      - "AElf.Launcher"
+      - "--reader-node-arguments"
+      - "--data-directory /data/node"
+    ports:
+      - "8000:8000"
+      - "6801:6801"
+      - "5001:5001"
+      - "5011:5011"
+      - "5021:5021"
+      - "5031:5031"
+      - "5041:5041"
+      - "5051:5051"
+    environment:
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app
+    volumes:
+      - "./fireaelf-data:/data"
+      - "./Logs:/app/Logs"
+      - "./start-aelf-node:/app/AElf.Launcher"
+      - "./appsettings.json:/app/appsettings.json"
+      - "./appsettings.MainChain.TestNet.json:/app/appsettings.MainChain.TestNet.json"
+      - "./appsettings.Production.json:/app/appsettings.Production.json"
+      - "./W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json:/root/.local/share/aelf/keys/W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json"
+    depends_on:
+      chaindb:
+        condition: service_healthy
+      statedb:
+        condition: service_healthy
+    restart: always
