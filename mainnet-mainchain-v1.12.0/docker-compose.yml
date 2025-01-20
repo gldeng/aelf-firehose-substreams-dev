@@ -1,5 +1,35 @@
 version: "3.8"
 services:
+  chaindb:
+    image: "aelf/aelf-ssdb:latest"
+    ports:
+      - "8881:8888"
+    volumes:
+      - "./data/chaindb/var:/opt/var"
+      - "./data/chaindb/log.txt:/opt/log.txt"
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/8888"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    restart: always
+
+  statedb:
+    image: "aelf/aelf-ssdb:latest"
+    ports:
+      - "8882:8888"
+    volumes:
+      - "./data/statedb/var:/opt/var"
+      - "./data/statedb/log.txt:/opt/log.txt"
+    healthcheck:
+      test: ["CMD", "bash", "-c", "echo > /dev/tcp/127.0.0.1/8888"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    restart: always
+
   reader:
     image: "ghcr.io/gldeng/fireaelf-docker-build-mainnet:679db11"
     command:
@@ -31,3 +61,9 @@ services:
       - "./appsettings.json:/app/appsettings.json"
       - "./appsettings.MainChain.MainNet.json:/app/appsettings.MainChain.MainNet.json"
       - "./W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json:/root/.local/share/aelf/keys/W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json"
+    depends_on:
+      chaindb:
+        condition: service_healthy
+      statedb:
+        condition: service_healthy
+    restart: always
