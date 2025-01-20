@@ -60,6 +60,7 @@ services:
       - "./start-aelf-node:/app/AElf.Launcher"
       - "./appsettings.json:/app/appsettings.json"
       - "./appsettings.MainChain.MainNet.json:/app/appsettings.MainChain.MainNet.json"
+      - "./appsettings.Production.json:/app/appsettings.Production.json"
       - "./W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json:/root/.local/share/aelf/keys/W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json"
     depends_on:
       chaindb:
