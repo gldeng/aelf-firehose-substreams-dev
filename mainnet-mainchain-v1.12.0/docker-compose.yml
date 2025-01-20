@@ -31,7 +31,7 @@ services:
     restart: always
 
   reader:
-    image: "ghcr.io/gldeng/fireaelf-docker-build-mainnet:679db11"
+    image: "ghcr.io/gldeng/fireaelf-docker-build-mainnet:033cb3e"
     command:
       - "--config-file"
       - ""
