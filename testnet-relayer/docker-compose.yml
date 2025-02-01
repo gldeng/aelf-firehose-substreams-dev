@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  relayer-mainchain:
+    image: "ghcr.io/gldeng/fireaelf-docker-build-testnet:7fe3b59"
+    command:
+      - "--config-file"
+      - ""
+      - "start"
+      - "relayer"
+      - "--common-one-block-store-url"
+      - "${DATA_PATH_MAINCHAIN:-file:///data}/one-blocks"
+      - "--relayer-source"
+      - "${READER_IP_MAINCHAIN:-reader}:10010"
+    volumes:
+      - "./fireaelf-data-mainchain:/data"
+  relayer-sidechain:
+    image: "ghcr.io/gldeng/fireaelf-docker-build-testnet:7fe3b59"
+    command:
+      - "--config-file"
+      - ""
+      - "start"
+      - "relayer"
+      - "--common-one-block-store-url"
+      - "${DATA_PATH_SIDECHAIN:-file:///data}/one-blocks"
+      - "--relayer-source"
+      - "${READER_IP_SIDECHAIN:-reader}:10010"
+    volumes:
+      - "./fireaelf-data-sidechain:/data"
+
