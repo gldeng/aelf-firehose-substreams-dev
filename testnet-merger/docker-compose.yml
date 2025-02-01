@@ -1,0 +1,45 @@
+version: "3.8"
+
+x-variables:
+  DATA_PATH_MAINCHAIN: "gs://fireaelf-testnet-mainchain-jan-2005-003"
+  DATA_PATH_SIDECHAIN: "gs://fireaelf-testnet-sidechain-jan-2005-003"
+
+services:
+  merger-mainchain:
+    image: "ghcr.io/gldeng/fireaelf-docker-build-testnet:7fe3b59"
+    command:
+      - "--config-file"
+      - ""
+      - "start"
+      - "merger"
+      - "--common-first-streamable-block"
+      - "247548442"
+      - "--common-one-block-store-url"
+      - "${DATA_PATH_MAINCHAIN:-file:///data}/one-blocks"
+      - "--common-merged-blocks-store-url"
+      - "${DATA_PATH_MAINCHAIN:-file:///data}/merged-blocks"
+      - "--common-forked-blocks-store-url"
+      - "${DATA_PATH_MAINCHAIN:-file:///data}/forked-blocks"
+    volumes:
+      - "./fireaelf-data-mainchain:/data"
+    environment:
+      DATA_PATH_MAINCHAIN: "${DATA_PATH_MAINCHAIN}"
+  merger-sidechain:
+    image: "ghcr.io/gldeng/fireaelf-docker-build-testnet:7fe3b59"
+    command:
+      - "--config-file"
+      - ""
+      - "start"
+      - "merger"
+      - "--common-first-streamable-block"
+      - "147160070"
+      - "--common-one-block-store-url"
+      - "${DATA_PATH_SIDECHAIN:-file:///data}/one-blocks"
+      - "--common-merged-blocks-store-url"
+      - "${DATA_PATH_SIDECHAIN:-file:///data}/merged-blocks"
+      - "--common-forked-blocks-store-url"
+      - "${DATA_PATH_SIDECHAIN:-file:///data}/forked-blocks"
+    volumes:
+      - "./fireaelf-data-sidechain:/data"
+    environment:
+      DATA_PATH_SIDECHAIN: "${DATA_PATH_SIDECHAIN}"
