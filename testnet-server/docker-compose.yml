@@ -43,7 +43,7 @@ services:
       - "--common-forked-blocks-store-url"
       - "${DATA_PATH_SIDECHAIN:-file:///data}/forked-blocks"
       - "--common-live-blocks-addr"
-      - "${RELAYER_IP_SIDECHAIN:-relayer}:10114"
+      - "${RELAYER_IP_SIDECHAIN:-relayer}:10214"
       - "--advertise-chain-name"
       - "tdvw"
       - "--advertise-block-id-encoding"
