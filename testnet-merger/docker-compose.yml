@@ -1,9 +1,5 @@
 version: "3.8"
 
-x-variables:
-  DATA_PATH_MAINCHAIN: "gs://fireaelf-testnet-mainchain-jan-2005-003"
-  DATA_PATH_SIDECHAIN: "gs://fireaelf-testnet-sidechain-jan-2005-003"
-
 services:
   merger-mainchain:
     image: "ghcr.io/gldeng/fireaelf-docker-build-testnet:7fe3b59"
@@ -22,8 +18,6 @@ services:
       - "${DATA_PATH_MAINCHAIN:-file:///data}/forked-blocks"
     volumes:
       - "./fireaelf-data-mainchain:/data"
-    environment:
-      DATA_PATH_MAINCHAIN: "${DATA_PATH_MAINCHAIN}"
   merger-sidechain:
     image: "ghcr.io/gldeng/fireaelf-docker-build-testnet:7fe3b59"
     command:
@@ -41,5 +35,4 @@ services:
       - "${DATA_PATH_SIDECHAIN:-file:///data}/forked-blocks"
     volumes:
       - "./fireaelf-data-sidechain:/data"
-    environment:
-      DATA_PATH_SIDECHAIN: "${DATA_PATH_SIDECHAIN}"
+
