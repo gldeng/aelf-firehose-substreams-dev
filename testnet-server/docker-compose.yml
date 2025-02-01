@@ -1,0 +1,57 @@
+version: "3.8"
+
+services:
+  server-mainchain:
+    image: "ghcr.io/gldeng/fireaelf-docker-build-testnet:7fe3b59"
+    command:
+      - "--config-file"
+      - ""
+      - "start"
+      - "firehose,substreams-tier1,substreams-tier2"
+      - "--common-live-blocks-addr"
+      - "--common-first-streamable-block=247548442"
+      - "--substreams-state-bundle-size=10"
+      - "--common-one-block-store-url"
+      - "${DATA_PATH_MAINCHAIN:-file:///data}/one-blocks"
+      - "--common-merged-blocks-store-url"
+      - "${DATA_PATH_MAINCHAIN:-file:///data}/merged-blocks"
+      - "--common-forked-blocks-store-url"
+      - "${DATA_PATH_MAINCHAIN:-file:///data}/forked-blocks"
+      - "--common-live-blocks-addr"
+      - "${RELAYER_IP_MAINCHAIN:-relayer}:10114"
+      - "--advertise-chain-name"
+      - "aelf"
+      - "--advertise-block-id-encoding"
+      - "hex"
+    ports:
+      - "10115:10015"
+      - "10116:10016"
+    volumes:
+      - "./fireaelf-data-mainchain:/data"
+  server-sidechain:
+    image: "ghcr.io/gldeng/fireaelf-docker-build-testnet:7fe3b59"
+    command:
+      - "--config-file"
+      - ""
+      - "start"
+      - "firehose,substreams-tier1,substreams-tier2"
+      - "--common-live-blocks-addr"
+      - "--common-first-streamable-block=147160070"
+      - "--substreams-state-bundle-size=10"
+      - "--common-one-block-store-url"
+      - "${DATA_PATH_SIDECHAIN:-file:///data}/one-blocks"
+      - "--common-merged-blocks-store-url"
+      - "${DATA_PATH_SIDECHAIN:-file:///data}/merged-blocks"
+      - "--common-forked-blocks-store-url"
+      - "${DATA_PATH_SIDECHAIN:-file:///data}/forked-blocks"
+      - "--common-live-blocks-addr"
+      - "${RELAYER_IP_SIDECHAIN:-relayer}:10114"
+      - "--advertise-chain-name"
+      - "tdvw"
+      - "--advertise-block-id-encoding"
+      - "hex"
+    ports:
+      - "10215:10015"
+      - "10216:10016"
+    volumes:
+      - "./fireaelf-data-sidechain:/data"
