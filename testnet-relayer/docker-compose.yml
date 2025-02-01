@@ -12,6 +12,8 @@ services:
       - "${DATA_PATH_MAINCHAIN:-file:///data}/one-blocks"
       - "--relayer-source"
       - "${READER_IP_MAINCHAIN:-reader}:10010"
+    ports:
+      - "10114:10014"
     volumes:
       - "./fireaelf-data-mainchain:/data"
   relayer-sidechain:
@@ -25,6 +27,7 @@ services:
       - "${DATA_PATH_SIDECHAIN:-file:///data}/one-blocks"
       - "--relayer-source"
       - "${READER_IP_SIDECHAIN:-reader}:10010"
+    ports:
+      - "10214:10014"
     volumes:
       - "./fireaelf-data-sidechain:/data"
-
