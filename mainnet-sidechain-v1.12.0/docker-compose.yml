@@ -31,7 +31,7 @@ services:
     restart: always
 
   fireaelf:
-    image: "ghcr.io/gldeng/fireaelf-docker-build-mainnet:7fe3b59"
+    image: "ghcr.io/gldeng/fireaelf-docker-build-mainnet:046ff96"
     command:
       - "--config-file"
       - ""
